@@ -1,0 +1,48 @@
+site_name: CLIPSiffy Studio
+site_description: Official documentation for the CLIPS IDE and Fuzzy Logic Builder.
+site_author: Tu Nombre
+
+# Usar el tema Material
+theme:
+  name: material
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  palette: 
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+extra_css:
+  - https://unpkg.com/katex@0.16.9/dist/katex.min.css
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0.16.9/dist/katex.min.js
+  - https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js
+
+# Estructura del menú de navegación
+nav:
+  - Introduction: index.md
+  - Getting Started: getting_started.md
+  - User Interface: user_interface.md
+  - Execution & Debugging: execution_debugging.md
+  - Fuzzy Logic Mode: fuzzy_logic_mode.md
+  - Visualization Tools: visualization_tools.md
+  - Settings: settings.md
+  - Keyboard Shortcuts: shortcuts.md

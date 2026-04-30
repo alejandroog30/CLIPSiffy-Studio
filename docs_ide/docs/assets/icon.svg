@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Dark slate squircle background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a36"/>
+      <stop offset="100%" stop-color="#121218"/>
+    </linearGradient>
+
+    <!-- Vibrant Blue Gradient (Left Fuzzy Set) -->
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="blue-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Vibrant Purple Gradient (Center Fuzzy Set) -->
+    <linearGradient id="purple-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="purple-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Vibrant Orange Gradient (Right Fuzzy Set) -->
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="orange-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base App Icon Shape (Rounded Rectangle / Squircle) -->
+  <rect width="256" height="256" rx="56" fill="url(#bg-grad)"/>
+
+  <!-- Universe of Discourse / X-Axis Base Line -->
+  <path d="M 24 180 L 232 180" stroke="#858585" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Fuzzy Logic Membership Curves (Gaussian Sets) Scaled Up -->
+  
+  <!-- Left Fuzzy Set (Blue) -->
+  <path d="M 34 180 C 53 180, 65 99, 84 99 C 103 99, 115 180, 134 180" fill="url(#blue-fill)" stroke="url(#blue-grad)" stroke-width="14" stroke-linecap="round"/>
+  
+  <!-- Right Fuzzy Set (Orange) -->
+  <path d="M 122 180 C 140 180, 153 99, 172 99 C 191 99, 203 180, 222 180" fill="url(#orange-fill)" stroke="url(#orange-grad)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Center Fuzzy Set (Purple, drawn last to overlap cleanly in the middle) -->
+  <path d="M 72 180 C 97 180, 109 58, 128 58 C 147 58, 159 180, 184 180" fill="url(#purple-fill)" stroke="url(#purple-grad)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Logic Node Dots at the peaks (Representing Degree of Membership = 1.0) -->
+  <circle cx="84" cy="99" r="6" fill="#ffffff" />
+  <circle cx="172" cy="99" r="6" fill="#ffffff" />
+  <circle cx="128" cy="58" r="8" fill="#ffffff" />
+  
+  <!-- Subtle UI Code lines accent (Top right) pushed slightly to accommodate the larger graph -->
+  <rect x="190" y="25" width="24" height="6" rx="3" fill="#ffffff" opacity="0.15"/>
+  <rect x="220" y="25" width="12" height="6" rx="3" fill="#ffffff" opacity="0.15"/>
+</svg>
