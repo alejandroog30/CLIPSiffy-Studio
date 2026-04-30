@@ -1052,7 +1052,7 @@ class ClipsIDE(QMainWindow):
             base_dir = os.path.dirname(os.path.abspath(__file__))
             
         # Construct the full path to the examples folder
-        examples_dir = os.path.join(base_dir, "fuzzy_lib", "tests")
+        examples_dir = os.path.join(base_dir, "fuzzy_lib", "fuzzy_lib", "tests")
         file_path = os.path.join(examples_dir, filename)
         
         # Check if the file actually exists
@@ -1133,7 +1133,7 @@ class ClipsIDE(QMainWindow):
             
             library_loaded = True
             for f_name in fuzzy_files:
-                file_path = os.path.join(base_path, "fuzzy_lib", "src", f_name)
+                file_path = os.path.join(base_path, "fuzzy_lib", "fuzzy_lib", "src", f_name)
                 if os.path.exists(file_path):
                     try:
                         self.env.load(file_path)
@@ -1272,7 +1272,7 @@ class ClipsIDE(QMainWindow):
 
     def logic_docs_fuzzy(self):
         """Opens the documentation for the Fuzzy Library."""
-        self._open_docs_browser("docs_lib/site/index.html")
+        self._open_docs_browser("fuzzy_lib/docs_lib/site/index.html")
 
     def logic_docs_ide(self):
         """Opens the documentation for the IDE."""
