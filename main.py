@@ -674,7 +674,10 @@ class ClipsIDE(QMainWindow):
 
     def logic_export_fuzzy(self):
         """Extracts fuzzy constructs and rules from memory and writes them into a new file tab."""
-        allowed_templates = ["FuzzySystemConfig", "FuzzyVar", "FuzzySet", "CrispInput", "Connection", "LinguisticModifier"]
+        allowed_templates = [
+            "FuzzySystemConfig", "FuzzyVar", "FuzzySet", "CrispInput", "Connection", "LinguisticModifier",
+            "EnvConfig", "EnvVar", "EnvEquation", "EnvLink"
+        ]
         exported_text = ";; =========================================\n;; EXPORTED FUZZY CONFIGURATION\n;; =========================================\n\n(deffacts exported-fuzzy-facts\n"
         has_facts = False
         for fact in self.env.facts():
@@ -700,7 +703,7 @@ class ClipsIDE(QMainWindow):
         new_editor.setPlainText(exported_text)
         new_editor.document().setModified(True) 
         new_editor.document().modificationChanged.connect(lambda modified, ed=new_editor: self._mark_modified(ed, modified))
-        index = self.editor_tabs.addTab(new_editor, "Fuzzy_Export*")
+        index = self.editor_tabs.addTab(new_editor, "Fuzzy_Env_Export*")
         self.editor_tabs.setTabToolTip(index, "") 
         self.editor_tabs.setCurrentIndex(index)
         self.console.write("\n> [OK] Configuration successfully exported to a new tab.")
